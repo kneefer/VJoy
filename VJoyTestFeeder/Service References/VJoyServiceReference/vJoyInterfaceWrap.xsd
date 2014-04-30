@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/vJoyInterfaceWrap" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/vJoyInterfaceWrap" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="vJoy.JoystickState">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aileron" type="xs:int" />
+      <xs:element minOccurs="0" name="AxisVBRX" type="xs:int" />
+      <xs:element minOccurs="0" name="AxisVBRY" type="xs:int" />
+      <xs:element minOccurs="0" name="AxisVBRZ" type="xs:int" />
+      <xs:element minOccurs="0" name="AxisVX" type="xs:int" />
+      <xs:element minOccurs="0" name="AxisVY" type="xs:int" />
+      <xs:element minOccurs="0" name="AxisVZ" type="xs:int" />
+      <xs:element minOccurs="0" name="AxisX" type="xs:int" />
+      <xs:element minOccurs="0" name="AxisXRot" type="xs:int" />
+      <xs:element minOccurs="0" name="AxisY" type="xs:int" />
+      <xs:element minOccurs="0" name="AxisYRot" type="xs:int" />
+      <xs:element minOccurs="0" name="AxisZ" type="xs:int" />
+      <xs:element minOccurs="0" name="AxisZRot" type="xs:int" />
+      <xs:element minOccurs="0" name="Buttons" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="Dial" type="xs:int" />
+      <xs:element minOccurs="0" name="Rudder" type="xs:int" />
+      <xs:element minOccurs="0" name="Slider" type="xs:int" />
+      <xs:element minOccurs="0" name="Throttle" type="xs:int" />
+      <xs:element minOccurs="0" name="Wheel" type="xs:int" />
+      <xs:element minOccurs="0" name="bDevice" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="bHats" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="bHatsEx1" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="bHatsEx2" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="bHatsEx3" type="xs:unsignedInt" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="vJoy.JoystickState" nillable="true" type="tns:vJoy.JoystickState" />
+</xs:schema>
