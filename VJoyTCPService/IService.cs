@@ -1,5 +1,6 @@
 ﻿using System.Runtime.Serialization;
 using System.ServiceModel;
+using vJoyInterfaceWrap;
 
 namespace VJoyTCPService
 {
@@ -7,32 +8,10 @@ namespace VJoyTCPService
     public interface IService
     {
         [OperationContract]
-        string GetData(int value);
+        int ConnectJoystick();
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        void PostCurrentJoystickState(int joyId, vJoy.JoystickState joyState);
 
-        // TODO: Add your service operations here
-    }
-
-    [DataContract]
-    public class CompositeType
-    {
-        bool boolValue = true;
-        string stringValue = "Hello ";
-
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
-
-        [DataMember]
-        public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
     }
 }

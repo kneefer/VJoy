@@ -9,86 +9,23 @@
 //------------------------------------------------------------------------------
 
 namespace VJoyTestFeeder.VJoyServiceReference {
-    using System.Runtime.Serialization;
-    using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/VJoyTCPService")]
-    [System.SerializableAttribute()]
-    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool BoolValueField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StringValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool BoolValue {
-            get {
-                return this.BoolValueField;
-            }
-            set {
-                if ((this.BoolValueField.Equals(value) != true)) {
-                    this.BoolValueField = value;
-                    this.RaisePropertyChanged("BoolValue");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StringValue {
-            get {
-                return this.StringValueField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StringValueField, value) != true)) {
-                    this.StringValueField = value;
-                    this.RaisePropertyChanged("StringValue");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="VJoyServiceReference.IService")]
     public interface IService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetData", ReplyAction="http://tempuri.org/IService/GetDataResponse")]
-        string GetData(int value);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ConnectJoystick", ReplyAction="http://tempuri.org/IService/ConnectJoystickResponse")]
+        int ConnectJoystick();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetData", ReplyAction="http://tempuri.org/IService/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(int value);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ConnectJoystick", ReplyAction="http://tempuri.org/IService/ConnectJoystickResponse")]
+        System.Threading.Tasks.Task<int> ConnectJoystickAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService/GetDataUsingDataContractResponse")]
-        VJoyTestFeeder.VJoyServiceReference.CompositeType GetDataUsingDataContract(VJoyTestFeeder.VJoyServiceReference.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/PostCurrentJoystickState", ReplyAction="http://tempuri.org/IService/PostCurrentJoystickStateResponse")]
+        void PostCurrentJoystickState(int joyId, vJoyInterfaceWrap.vJoy.JoystickState joyState);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<VJoyTestFeeder.VJoyServiceReference.CompositeType> GetDataUsingDataContractAsync(VJoyTestFeeder.VJoyServiceReference.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/PostCurrentJoystickState", ReplyAction="http://tempuri.org/IService/PostCurrentJoystickStateResponse")]
+        System.Threading.Tasks.Task PostCurrentJoystickStateAsync(int joyId, vJoyInterfaceWrap.vJoy.JoystickState joyState);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -118,20 +55,20 @@ namespace VJoyTestFeeder.VJoyServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public string GetData(int value) {
-            return base.Channel.GetData(value);
+        public int ConnectJoystick() {
+            return base.Channel.ConnectJoystick();
         }
         
-        public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
-            return base.Channel.GetDataAsync(value);
+        public System.Threading.Tasks.Task<int> ConnectJoystickAsync() {
+            return base.Channel.ConnectJoystickAsync();
         }
         
-        public VJoyTestFeeder.VJoyServiceReference.CompositeType GetDataUsingDataContract(VJoyTestFeeder.VJoyServiceReference.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContract(composite);
+        public void PostCurrentJoystickState(int joyId, vJoyInterfaceWrap.vJoy.JoystickState joyState) {
+            base.Channel.PostCurrentJoystickState(joyId, joyState);
         }
         
-        public System.Threading.Tasks.Task<VJoyTestFeeder.VJoyServiceReference.CompositeType> GetDataUsingDataContractAsync(VJoyTestFeeder.VJoyServiceReference.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContractAsync(composite);
+        public System.Threading.Tasks.Task PostCurrentJoystickStateAsync(int joyId, vJoyInterfaceWrap.vJoy.JoystickState joyState) {
+            return base.Channel.PostCurrentJoystickStateAsync(joyId, joyState);
         }
     }
 }

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VJoyTCPService", "VJoyTCPSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgzotechVJoyService", "EgzotechVJoyService\EgzotechVJoyService.csproj", "{539C7144-4A83-41EC-B819-789CCD68CAA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VJoyTestFeeder", "VJoyTestFeeder\VJoyTestFeeder.csproj", "{B739F048-890C-493C-93F0-F9381AD01806}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VJoyTestFeeder", "VJoyTestFeeder\VJoyTestFeeder.csproj", "{B4DD1A4A-03C4-45BA-87E5-261EE7F50EA2}"
 	ProjectSection(ProjectDependencies) = postProject
 		{87A7BB31-64D4-461B-B471-308EC961F3AE} = {87A7BB31-64D4-461B-B471-308EC961F3AE}
 	EndProjectSection
@@ -26,10 +26,10 @@ Global
 		{539C7144-4A83-41EC-B819-789CCD68CAA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{539C7144-4A83-41EC-B819-789CCD68CAA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{539C7144-4A83-41EC-B819-789CCD68CAA6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B739F048-890C-493C-93F0-F9381AD01806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B739F048-890C-493C-93F0-F9381AD01806}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B739F048-890C-493C-93F0-F9381AD01806}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B739F048-890C-493C-93F0-F9381AD01806}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4DD1A4A-03C4-45BA-87E5-261EE7F50EA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4DD1A4A-03C4-45BA-87E5-261EE7F50EA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4DD1A4A-03C4-45BA-87E5-261EE7F50EA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4DD1A4A-03C4-45BA-87E5-261EE7F50EA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

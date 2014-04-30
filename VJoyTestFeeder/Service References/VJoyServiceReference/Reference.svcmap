@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="645ea426-9437-4905-bd42-38941f9058dd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ce88ea2b-b329-4c25-b4ab-05db0cb6d7bf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="net.tcp://localhost:8529/VJoyService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="58d08112-6d09-431c-bc01-c60480272dc3" SourceId="1" SourceUrl="net.tcp://localhost:8529/VJoyService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="28793a75-c8ff-4b66-90e5-82085238f250" SourceId="1" SourceUrl="net.tcp://localhost:8529/VJoyService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="08eabdda-82ea-4ae2-90fb-ff3960090edd" SourceId="1" SourceUrl="net.tcp://localhost:8529/VJoyService/mex" />
-    <MetadataFile FileName="VJoyTCPService.xsd" MetadataType="Schema" ID="391b22ad-fac2-486d-8331-b04b77b08ab4" SourceId="1" SourceUrl="net.tcp://localhost:8529/VJoyService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="5ac4a399-518e-4c59-a33a-da62fc18bc7d" SourceId="1" SourceUrl="net.tcp://localhost:8529/VJoyService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="11fb421a-ddbc-43c1-967e-ba0db1dd6797" SourceId="1" SourceUrl="net.tcp://localhost:8529/VJoyService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="3ad0009b-d731-4eaf-b300-98cc5da6e9c9" SourceId="1" SourceUrl="net.tcp://localhost:8529/VJoyService/mex" />
+    <MetadataFile FileName="vJoyInterfaceWrap.xsd" MetadataType="Schema" ID="ebee3bbc-5fdb-457f-a4c8-d8a374b49ff0" SourceId="1" SourceUrl="net.tcp://localhost:8529/VJoyService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

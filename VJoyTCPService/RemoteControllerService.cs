@@ -1,25 +1,19 @@
 ﻿using System;
+using vJoyInterfaceWrap;
 
 namespace VJoyTCPService
 {
     public class RemoteControllerService : IService
     {
-        public string GetData(int value)
+        public int ConnectJoystick()
         {
-            return string.Format("You entered: {0}", value);
+            //TODO: Everything
+            return 1;
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public void PostCurrentJoystickState(int joyId, vJoy.JoystickState joyState)
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            //TODO: Everything
         }
     }
 }

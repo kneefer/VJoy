@@ -43,6 +43,9 @@
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="vJoyInterfaceWrap">
+      <HintPath>..\..\..\..\..\Desktop\SDK\c#\x86\vJoyInterfaceWrap.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IService.cs" />
