@@ -1,5 +1,6 @@
 ﻿using System;
 using vJoyInterfaceWrap;
+using VJoyTCPService.JoysBackend;
 
 namespace VJoyTCPService
 {

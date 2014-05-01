@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/VJoyTCPService" />
   <xs:import namespace="http://schemas.datacontract.org/2004/07/vJoyInterfaceWrap" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
   <xs:element name="ConnectJoystick">
     <xs:complexType>
       <xs:sequence />
@@ -9,15 +11,29 @@
   <xs:element name="ConnectJoystickResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="ConnectJoystickResult" type="xs:int" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/VJoyTCPService" minOccurs="0" name="ConnectJoystickResult" nillable="true" type="q1:JoyCapabilities" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisconnectJoystick">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/VJoyTCPService" minOccurs="0" name="capabilities" nillable="true" type="q2:JoyCapabilities" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisconnectJoystickResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DisconnectJoystickResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="PostCurrentJoystickState">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="joyId" type="xs:int" />
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/vJoyInterfaceWrap" minOccurs="0" name="joyState" type="q1:vJoy.JoystickState" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/vJoyInterfaceWrap" minOccurs="0" name="joyState" type="q3:vJoy.JoystickState" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="token" type="q4:guid" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

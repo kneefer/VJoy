@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using vJoyInterfaceWrap;
 
-namespace VJoyTCPService
+namespace VJoyTCPService.JoysBackend
 {
     public class JoyFactory
     {
@@ -14,8 +14,8 @@ namespace VJoyTCPService
         {
             _joystics = new Collection<JoyControl>
             {
-                new JoyControl(5),
-                new JoyControl(6),
+                new JoyControl(5), // 5 is the device ID which has to be between (1,15) and must exists in system
+                new JoyControl(6), // 6 is the device ID which has to be between (1,15) and must exists in system
             };
         }
 
@@ -31,7 +31,7 @@ namespace VJoyTCPService
 
         public bool Disconnect(JoyCapabilities capabilities)
         {
-            foreach (var joy in _joystics.Where(joy => joy.Capabilities.Token == capabilities.Token))
+            foreach (var joy in _joystics.Where(joy => joy.IsBusy && joy.Capabilities.Token == capabilities.Token))
             {
                 return joy.Disconnect();
             }
@@ -40,7 +40,7 @@ namespace VJoyTCPService
 
         public void PostCurrentJoystickState(vJoy.JoystickState joyState, Guid token)
         {
-            foreach (var joy in _joystics.Where(joy => joy.Capabilities.Token == token))
+            foreach (var joy in _joystics.Where(joy => joy.IsBusy && joy.Capabilities.Token == token))
             {
                 joy.PostCurrentState(joyState);
                 return;

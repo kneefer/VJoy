@@ -37,6 +37,7 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import namespace="http://tempuri.org/" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/VJoyTCPService" />
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/vJoyInterfaceWrap" />
     </xsd:schema>
   </wsdl:types>
@@ -45,6 +46,12 @@
   </wsdl:message>
   <wsdl:message name="IService_ConnectJoystick_OutputMessage">
     <wsdl:part name="parameters" element="tns:ConnectJoystickResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DisconnectJoystick_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisconnectJoystick" />
+  </wsdl:message>
+  <wsdl:message name="IService_DisconnectJoystick_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisconnectJoystickResponse" />
   </wsdl:message>
   <wsdl:message name="IService_PostCurrentJoystickState_InputMessage">
     <wsdl:part name="parameters" element="tns:PostCurrentJoystickState" />
@@ -57,6 +64,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService/ConnectJoystick" message="tns:IService_ConnectJoystick_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/ConnectJoystickResponse" message="tns:IService_ConnectJoystick_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="DisconnectJoystick">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DisconnectJoystick" message="tns:IService_DisconnectJoystick_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DisconnectJoystickResponse" message="tns:IService_DisconnectJoystick_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="PostCurrentJoystickState">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/PostCurrentJoystickState" message="tns:IService_PostCurrentJoystickState_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/PostCurrentJoystickStateResponse" message="tns:IService_PostCurrentJoystickState_OutputMessage" />
@@ -68,6 +79,15 @@
     <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
     <wsdl:operation name="ConnectJoystick">
       <soap12:operation soapAction="http://tempuri.org/IService/ConnectJoystick" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisconnectJoystick">
+      <soap12:operation soapAction="http://tempuri.org/IService/DisconnectJoystick" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

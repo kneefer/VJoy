@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/VJoyTCPService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/VJoyTCPService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="JoyCapabilities">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AxisXExists" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AxisXMax" type="xs:int" />
+      <xs:element minOccurs="0" name="AxisYExists" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AxisYMax" type="xs:int" />
+      <xs:element minOccurs="0" name="ButtonsCount" type="xs:int" />
+      <xs:element minOccurs="0" name="DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ErrorInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JoyId" type="xs:int" />
+      <xs:element minOccurs="0" name="JoyInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Token" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JoyCapabilities" nillable="true" type="tns:JoyCapabilities" />
+</xs:schema>

@@ -9,23 +9,220 @@
 //------------------------------------------------------------------------------
 
 namespace VJoyTestFeeder.VJoyServiceReference {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="JoyCapabilities", Namespace="http://schemas.datacontract.org/2004/07/VJoyTCPService")]
+    [System.SerializableAttribute()]
+    public partial class JoyCapabilities : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool AxisXExistsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AxisXMaxField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool AxisYExistsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AxisYMaxField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ButtonsCountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorInfoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int JoyIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string JoyInfoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid TokenField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool AxisXExists {
+            get {
+                return this.AxisXExistsField;
+            }
+            set {
+                if ((this.AxisXExistsField.Equals(value) != true)) {
+                    this.AxisXExistsField = value;
+                    this.RaisePropertyChanged("AxisXExists");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int AxisXMax {
+            get {
+                return this.AxisXMaxField;
+            }
+            set {
+                if ((this.AxisXMaxField.Equals(value) != true)) {
+                    this.AxisXMaxField = value;
+                    this.RaisePropertyChanged("AxisXMax");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool AxisYExists {
+            get {
+                return this.AxisYExistsField;
+            }
+            set {
+                if ((this.AxisYExistsField.Equals(value) != true)) {
+                    this.AxisYExistsField = value;
+                    this.RaisePropertyChanged("AxisYExists");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int AxisYMax {
+            get {
+                return this.AxisYMaxField;
+            }
+            set {
+                if ((this.AxisYMaxField.Equals(value) != true)) {
+                    this.AxisYMaxField = value;
+                    this.RaisePropertyChanged("AxisYMax");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ButtonsCount {
+            get {
+                return this.ButtonsCountField;
+            }
+            set {
+                if ((this.ButtonsCountField.Equals(value) != true)) {
+                    this.ButtonsCountField = value;
+                    this.RaisePropertyChanged("ButtonsCount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DateTime {
+            get {
+                return this.DateTimeField;
+            }
+            set {
+                if ((this.DateTimeField.Equals(value) != true)) {
+                    this.DateTimeField = value;
+                    this.RaisePropertyChanged("DateTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorInfo {
+            get {
+                return this.ErrorInfoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorInfoField, value) != true)) {
+                    this.ErrorInfoField = value;
+                    this.RaisePropertyChanged("ErrorInfo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int JoyId {
+            get {
+                return this.JoyIdField;
+            }
+            set {
+                if ((this.JoyIdField.Equals(value) != true)) {
+                    this.JoyIdField = value;
+                    this.RaisePropertyChanged("JoyId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string JoyInfo {
+            get {
+                return this.JoyInfoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.JoyInfoField, value) != true)) {
+                    this.JoyInfoField = value;
+                    this.RaisePropertyChanged("JoyInfo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid Token {
+            get {
+                return this.TokenField;
+            }
+            set {
+                if ((this.TokenField.Equals(value) != true)) {
+                    this.TokenField = value;
+                    this.RaisePropertyChanged("Token");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="VJoyServiceReference.IService")]
     public interface IService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ConnectJoystick", ReplyAction="http://tempuri.org/IService/ConnectJoystickResponse")]
-        int ConnectJoystick();
+        VJoyTestFeeder.VJoyServiceReference.JoyCapabilities ConnectJoystick();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ConnectJoystick", ReplyAction="http://tempuri.org/IService/ConnectJoystickResponse")]
-        System.Threading.Tasks.Task<int> ConnectJoystickAsync();
+        System.Threading.Tasks.Task<VJoyTestFeeder.VJoyServiceReference.JoyCapabilities> ConnectJoystickAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DisconnectJoystick", ReplyAction="http://tempuri.org/IService/DisconnectJoystickResponse")]
+        bool DisconnectJoystick(VJoyTestFeeder.VJoyServiceReference.JoyCapabilities capabilities);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DisconnectJoystick", ReplyAction="http://tempuri.org/IService/DisconnectJoystickResponse")]
+        System.Threading.Tasks.Task<bool> DisconnectJoystickAsync(VJoyTestFeeder.VJoyServiceReference.JoyCapabilities capabilities);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/PostCurrentJoystickState", ReplyAction="http://tempuri.org/IService/PostCurrentJoystickStateResponse")]
-        void PostCurrentJoystickState(int joyId, vJoyInterfaceWrap.vJoy.JoystickState joyState);
+        void PostCurrentJoystickState(vJoyInterfaceWrap.vJoy.JoystickState joyState, System.Guid token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/PostCurrentJoystickState", ReplyAction="http://tempuri.org/IService/PostCurrentJoystickStateResponse")]
-        System.Threading.Tasks.Task PostCurrentJoystickStateAsync(int joyId, vJoyInterfaceWrap.vJoy.JoystickState joyState);
+        System.Threading.Tasks.Task PostCurrentJoystickStateAsync(vJoyInterfaceWrap.vJoy.JoystickState joyState, System.Guid token);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,20 +252,28 @@ namespace VJoyTestFeeder.VJoyServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public int ConnectJoystick() {
+        public VJoyTestFeeder.VJoyServiceReference.JoyCapabilities ConnectJoystick() {
             return base.Channel.ConnectJoystick();
         }
         
-        public System.Threading.Tasks.Task<int> ConnectJoystickAsync() {
+        public System.Threading.Tasks.Task<VJoyTestFeeder.VJoyServiceReference.JoyCapabilities> ConnectJoystickAsync() {
             return base.Channel.ConnectJoystickAsync();
         }
         
-        public void PostCurrentJoystickState(int joyId, vJoyInterfaceWrap.vJoy.JoystickState joyState) {
-            base.Channel.PostCurrentJoystickState(joyId, joyState);
+        public bool DisconnectJoystick(VJoyTestFeeder.VJoyServiceReference.JoyCapabilities capabilities) {
+            return base.Channel.DisconnectJoystick(capabilities);
         }
         
-        public System.Threading.Tasks.Task PostCurrentJoystickStateAsync(int joyId, vJoyInterfaceWrap.vJoy.JoystickState joyState) {
-            return base.Channel.PostCurrentJoystickStateAsync(joyId, joyState);
+        public System.Threading.Tasks.Task<bool> DisconnectJoystickAsync(VJoyTestFeeder.VJoyServiceReference.JoyCapabilities capabilities) {
+            return base.Channel.DisconnectJoystickAsync(capabilities);
+        }
+        
+        public void PostCurrentJoystickState(vJoyInterfaceWrap.vJoy.JoystickState joyState, System.Guid token) {
+            base.Channel.PostCurrentJoystickState(joyState, token);
+        }
+        
+        public System.Threading.Tasks.Task PostCurrentJoystickStateAsync(vJoyInterfaceWrap.vJoy.JoystickState joyState, System.Guid token) {
+            return base.Channel.PostCurrentJoystickStateAsync(joyState, token);
         }
     }
 }

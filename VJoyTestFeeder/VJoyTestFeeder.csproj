@@ -36,14 +36,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -109,6 +105,12 @@
     </None>
     <None Include="Service References\VJoyServiceReference\vJoyInterfaceWrap.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VJoyServiceReference\VJoyTCPService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VJoyServiceReference\VJoyTestFeeder.VJoyServiceReference.JoyCapabilities.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

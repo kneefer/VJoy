@@ -25,6 +25,7 @@
     <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="5ac4a399-518e-4c59-a33a-da62fc18bc7d" SourceId="1" SourceUrl="net.tcp://localhost:8529/VJoyService/mex" />
     <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="11fb421a-ddbc-43c1-967e-ba0db1dd6797" SourceId="1" SourceUrl="net.tcp://localhost:8529/VJoyService/mex" />
     <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="3ad0009b-d731-4eaf-b300-98cc5da6e9c9" SourceId="1" SourceUrl="net.tcp://localhost:8529/VJoyService/mex" />
+    <MetadataFile FileName="VJoyTCPService.xsd" MetadataType="Schema" ID="66f85c63-39a6-43a7-9e29-ed5799bf8be8" SourceId="1" SourceUrl="net.tcp://localhost:8529/VJoyService/mex" />
     <MetadataFile FileName="vJoyInterfaceWrap.xsd" MetadataType="Schema" ID="ebee3bbc-5fdb-457f-a4c8-d8a374b49ff0" SourceId="1" SourceUrl="net.tcp://localhost:8529/VJoyService/mex" />
   </Metadata>
   <Extensions>
