@@ -31,12 +31,12 @@ namespace VJoyTCPService.JoysBackend
 
         public bool Disconnect()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void PostCurrentState(vJoy.JoystickState joyState)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

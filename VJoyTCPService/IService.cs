@@ -55,9 +55,9 @@ namespace VJoyTCPService
         public int AxisYMax { get; set; }
 
         [DataMember]
-        public Guid Token { get; set; }
+        public Guid Token { get; private set; }
 
         [DataMember]
-        public DateTime DateTime { get; set; }
+        public DateTime DateTime { get; private set; }
     }
 }
