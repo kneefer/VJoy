@@ -5,15 +5,20 @@ namespace VJoyTCPService
 {
     public class RemoteControllerService : IService
     {
-        public int ConnectJoystick()
+        private static readonly JoyFactory _factory = new JoyFactory();
+        public JoyCapabilities ConnectJoystick()
         {
-            //TODO: Everything
-            return 1;
+            return _factory.TryConnect();
         }
 
-        public void PostCurrentJoystickState(int joyId, vJoy.JoystickState joyState)
+        public bool DisconnectJoystick(JoyCapabilities capabilities)
         {
-            //TODO: Everything
+            return _factory.Disconnect(capabilities);
+        }
+
+        public void PostCurrentJoystickState(vJoy.JoystickState joyState, Guid token)
+        {
+            _factory.PostCurrentJoystickState(joyState, token);
         }
     }
 }
