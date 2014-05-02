@@ -26,13 +26,13 @@ namespace VJoyTestFeeder.VJoyServiceReference {
         private bool AxisXExistsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int AxisXMaxField;
+        private long AxisXMaxField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool AxisYExistsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int AxisYMaxField;
+        private long AxisYMaxField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int ButtonsCountField;
@@ -44,7 +44,7 @@ namespace VJoyTestFeeder.VJoyServiceReference {
         private string ErrorInfoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int JoyIdField;
+        private uint JoyIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string JoyInfoField;
@@ -76,7 +76,7 @@ namespace VJoyTestFeeder.VJoyServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int AxisXMax {
+        public long AxisXMax {
             get {
                 return this.AxisXMaxField;
             }
@@ -102,7 +102,7 @@ namespace VJoyTestFeeder.VJoyServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int AxisYMax {
+        public long AxisYMax {
             get {
                 return this.AxisYMaxField;
             }
@@ -154,7 +154,7 @@ namespace VJoyTestFeeder.VJoyServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int JoyId {
+        public uint JoyId {
             get {
                 return this.JoyIdField;
             }

@@ -31,7 +31,7 @@ namespace VJoyTCPService
 
         // JoyId = 0 if there was an error
         [DataMember] 
-        public int JoyId { get; set; }
+        public uint JoyId { get; set; }
 
         [DataMember]
         public string ErrorInfo { get; set; }
@@ -49,10 +49,10 @@ namespace VJoyTCPService
         public int ButtonsCount { get; set; }
 
         [DataMember]
-        public int AxisXMax { get; set; }
+        public long AxisXMax { get; set; }
 
         [DataMember]
-        public int AxisYMax { get; set; }
+        public long AxisYMax { get; set; }
 
         [DataMember]
         public Guid Token { get; private set; }

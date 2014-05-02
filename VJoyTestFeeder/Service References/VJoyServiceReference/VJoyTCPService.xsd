@@ -4,13 +4,13 @@
   <xs:complexType name="JoyCapabilities">
     <xs:sequence>
       <xs:element minOccurs="0" name="AxisXExists" type="xs:boolean" />
-      <xs:element minOccurs="0" name="AxisXMax" type="xs:int" />
+      <xs:element minOccurs="0" name="AxisXMax" type="xs:long" />
       <xs:element minOccurs="0" name="AxisYExists" type="xs:boolean" />
-      <xs:element minOccurs="0" name="AxisYMax" type="xs:int" />
+      <xs:element minOccurs="0" name="AxisYMax" type="xs:long" />
       <xs:element minOccurs="0" name="ButtonsCount" type="xs:int" />
       <xs:element minOccurs="0" name="DateTime" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ErrorInfo" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="JoyId" type="xs:int" />
+      <xs:element minOccurs="0" name="JoyId" type="xs:unsignedInt" />
       <xs:element minOccurs="0" name="JoyInfo" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Token" type="ser:guid" />
     </xs:sequence>
