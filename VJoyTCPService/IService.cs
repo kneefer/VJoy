@@ -29,7 +29,6 @@ namespace VJoyTCPService
             Token = new Guid();
         }
 
-        // JoyId = 0 if there was an error
         [DataMember] 
         public uint JoyId { get; set; }
 
