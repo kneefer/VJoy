@@ -16,14 +16,17 @@
         
         <Label Content="X" HorizontalAlignment="Left" Margin="19,55,0,0" VerticalAlignment="Top"/>
         <Label Content="Y" HorizontalAlignment="Left" Margin="19,89,0,0" VerticalAlignment="Top"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="36,142,35,22">
+            <ToggleButton Width="40" Margin="5" Content="1" IsChecked="{Binding JoyVM.Button1}" />
+            <ToggleButton Width="40" Margin="5" Content="2" IsChecked="{Binding JoyVM.Button2}" />
+            <ToggleButton Width="40" Margin="5" Content="3" IsChecked="{Binding JoyVM.Button3}" />
+            <ToggleButton Width="40" Margin="5" Content="4" IsChecked="{Binding JoyVM.Button4}" />
+            <ToggleButton Width="40" Margin="5" Content="5" IsChecked="{Binding JoyVM.Button5}" />
+            <ToggleButton Width="40" Margin="5" Content="6" IsChecked="{Binding JoyVM.Button6}" />
+            <ToggleButton Width="40" Margin="5" Content="7" IsChecked="{Binding JoyVM.Button7}" />
+            <ToggleButton Width="40" Margin="5" Content="8" IsChecked="{Binding JoyVM.Button8}" />
+        </StackPanel>
         
-        <Button Content="1" HorizontalAlignment="Left" Margin="80,149,0,0" VerticalAlignment="Top" Width="25" />
-        <Button Content="2" HorizontalAlignment="Left" Margin="120,149,0,0" VerticalAlignment="Top" Width="25"/>
-        <Button Content="3" HorizontalAlignment="Left" Margin="161,149,0,0" VerticalAlignment="Top" Width="25"/>
-        <Button Content="4" HorizontalAlignment="Left" Margin="204,149,0,0" VerticalAlignment="Top" Width="25"/>
-        <Button Content="5" HorizontalAlignment="Left" Margin="247,149,0,0" VerticalAlignment="Top" Width="25"/>
-        <Button Content="6" HorizontalAlignment="Left" Margin="291,149,0,0" VerticalAlignment="Top" Width="25"/>
-        <Button Content="7" HorizontalAlignment="Left" Margin="333,149,0,0" VerticalAlignment="Top" Width="25"/>
-        <Button Content="8" HorizontalAlignment="Left" Margin="376,149,0,0" VerticalAlignment="Top" Width="25"/>
     </Grid>
 </Window>

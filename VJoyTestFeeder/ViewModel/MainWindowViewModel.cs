@@ -40,6 +40,8 @@ namespace VJoyTestFeeder.ViewModel
         {
             _joystickState.AxisX = JoyVM.AxisX;
             _joystickState.AxisY = JoyVM.AxisY;
+            _joystickState.Buttons = JoyVM.GetButtons();
+
             _client.PostCurrentJoystickState(_joystickState, JoyCapabilities.Token);
         }
 

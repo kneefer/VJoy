@@ -1,21 +1,23 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Controls;
 using VJoyTestFeeder.Annotations;
 
 namespace VJoyTestFeeder.ViewModel
 {
-    public class JoyVM : INotifyPropertyChanged
+    public sealed class JoyVM : INotifyPropertyChanged
     {
-        private bool _button8;
-        private bool _button7;
-        private bool _button5;
-        private bool _button4;
-        private bool _button3;
-        private bool _button2;
-        private bool _button1;
         private int _axisY;
         private int _axisX;
+        private bool _button1;
+        private bool _button2;
+        private bool _button3;
+        private bool _button4;
+        private bool _button5;
         private bool _button6;
+        private bool _button7;
+        private bool _button8;
 
         public int AxisX
         {
@@ -37,6 +39,7 @@ namespace VJoyTestFeeder.ViewModel
                 OnPropertyChanged();
             }
         }
+
         public bool Button1
         {
             get { return _button1; }
@@ -118,12 +121,30 @@ namespace VJoyTestFeeder.ViewModel
             }
         }
 
+        public uint GetButtons()
+        {
+            uint toReturn = 0;
+
+            if (Button1) toReturn += (uint)(1 << 0);
+            if (Button2) toReturn += (uint)(1 << 1);
+            if (Button3) toReturn += (uint)(1 << 2);
+            if (Button4) toReturn += (uint)(1 << 3);
+            if (Button5) toReturn += (uint)(1 << 4);
+            if (Button6) toReturn += (uint)(1 << 5);
+            if (Button7) toReturn += (uint)(1 << 6);
+            if (Button8) toReturn += (uint)(1 << 7);
+
+            return toReturn;
+        }
+
+        /* We could create custom PropertyChangedEventEventArgs but it's only a test */
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            PropertyChangedEventHandler handler = PropertyChanged;
+            var handler = PropertyChanged;
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
     }
