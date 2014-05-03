@@ -18,7 +18,5 @@ namespace VJoyTestFeeder
 
             DataContext = this;
         }
-
-
     }
 }
