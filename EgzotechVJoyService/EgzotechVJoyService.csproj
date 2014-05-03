@@ -113,8 +113,14 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy "$(SolutionDir)\DLL\$(PlatformName)\vJoyInterface.dll" "$(TargetDir)"
-copy "$(SolutionDir)\DLL\Scripts\install.bat" "$(TargetDir)"
-copy "$(SolutionDir)\DLL\Scripts\uninstall.bat" "$(TargetDir)"</PostBuildEvent>
+
+if $(PlatformName) == x64 (
+copy "$(SolutionDir)\DLL\Scripts\install_x64.bat" "$(TargetDir)"
+copy "$(SolutionDir)\DLL\Scripts\uninstall_x64.bat" "$(TargetDir)"
+) ELSE (
+copy "$(SolutionDir)\DLL\Scripts\install_x86.bat" "$(TargetDir)"
+copy "$(SolutionDir)\DLL\Scripts\uninstall_x86.bat" "$(TargetDir)"
+)</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
