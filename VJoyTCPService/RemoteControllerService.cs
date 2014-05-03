@@ -7,6 +7,7 @@ namespace VJoyTCPService
     public class RemoteControllerService : IService
     {
         private static readonly JoyFactory _factory = new JoyFactory();
+
         public JoyCapabilities ConnectJoystick()
         {
             return _factory.TryConnect();

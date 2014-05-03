@@ -6,7 +6,7 @@ namespace VJoyTestFeeder
     public partial class MainWindow
     {
         private ServiceClient _client;
-        public vJoy.JoystickState JoystickState { get; set; }
+        private static vJoy.JoystickState _joystickState { get; set; }
         public JoyCapabilities JoyCapabilities { get; set; }
 
         public MainWindow()
@@ -14,6 +14,7 @@ namespace VJoyTestFeeder
             InitializeComponent();
 
             _client = new ServiceClient();
+            _joystickState = new vJoy.JoystickState();
             JoyCapabilities = _client.ConnectJoystick();
 
             DataContext = this;
