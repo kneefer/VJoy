@@ -9,7 +9,7 @@ namespace VJoyTCPService.JoysBackend
     /// <summary>
     /// Class-container of available joysticks and management for them
     /// </summary>
-    public class JoyFactory
+    internal class JoyFactory
     {
         private readonly ICollection<JoyControl> _joystics;
 

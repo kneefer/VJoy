@@ -1,23 +1,22 @@
-﻿using vJoyInterfaceWrap;
-using VJoyTestFeeder.VJoyServiceReference;
+﻿using System.ComponentModel;
+using VJoyTestFeeder.ViewModel;
 
 namespace VJoyTestFeeder
 {
     public partial class MainWindow
     {
-        private ServiceClient _client;
-        private static vJoy.JoystickState _joystickState { get; set; }
-        public JoyCapabilities JoyCapabilities { get; set; }
-
         public MainWindow()
         {
             InitializeComponent();
+        }
 
-            _client = new ServiceClient();
-            _joystickState = new vJoy.JoystickState();
-            JoyCapabilities = _client.ConnectJoystick();
-
-            DataContext = this;
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            var VM = DataContext as MainWindowViewModel;
+            if (VM != null)
+            {
+                VM.OnClosing();
+            }
         }
     }
 }

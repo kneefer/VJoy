@@ -154,3 +154,5 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+/packages/MvvmLightLibs.4.3.31.0
+/packages

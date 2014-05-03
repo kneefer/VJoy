@@ -8,7 +8,7 @@ namespace VJoyTCPService.JoysBackend
     /// <summary>
     /// Unit controlling virtual joystick with ID specified in constructor
     /// </summary>
-    public class JoyControl
+    internal class JoyControl
     {
         private readonly uint _joyId;
         private readonly vJoy _joystick;
@@ -32,6 +32,11 @@ namespace VJoyTCPService.JoysBackend
             _joystick = new vJoy();
         }
 
+        /// <summary>
+        /// Tries to connect to the current instance of JoyControl which manages a specific virtual joystick
+        /// </summary>
+        /// <returns>Struct containing information about engaged joystick or (in case of error)
+        /// information describing eventual problems with request</returns>
         public JoyCapabilities TryConnect()
         {
             if (IsBusy)
@@ -105,7 +110,7 @@ namespace VJoyTCPService.JoysBackend
         }
 
         /// <summary>
-        /// Disconnect the current instance of joystick from currently bound virtual device.
+        /// Disconnects the current instance of joystick from currently bound virtual device.
         /// </summary>
         /// <returns>The success of the disconnect operation</returns>
         public bool Disconnect()
