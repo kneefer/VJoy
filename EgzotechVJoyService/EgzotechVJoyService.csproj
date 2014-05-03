@@ -111,6 +111,11 @@
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(SolutionDir)\DLL\$(PlatformName)\vJoyInterface.dll" "$(TargetDir)"
+copy "$(SolutionDir)\DLL\Scripts\install.bat" "$(TargetDir)"
+copy "$(SolutionDir)\DLL\Scripts\uninstall.bat" "$(TargetDir)"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
